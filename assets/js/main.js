@@ -25,3 +25,19 @@
         }, false)
     })()
 
+    function validateRequired(input) {
+                return !(input.value == null || input.value == "");
+            }
+
+
+
+            function validateFields(input) {
+                let fieldName = input.name;
+                // Validaton de l'input PRENOM
+                if (fieldName == "firstName") {
+                    if (!validateRequired(input)) {
+                        return false;
+                    }
+                    return (true);
+                }
+            }
